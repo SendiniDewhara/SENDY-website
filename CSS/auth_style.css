@@ -1,0 +1,143 @@
+/* Styling for product grid and boxes */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Create small, cute boxes */
+    gap: 15px; /* Space between items */
+    padding: 20px;
+    justify-items: center; /* Center items horizontally */
+}
+
+.product-box {
+    background-color: #fff; /* White background for the product box */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for a cute look */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px; /* Fixed width for small boxes */
+    height: 250px; /* Fixed height to make boxes shorter */
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.product-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-image {
+    width: 100%;
+    height: 120px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    margin-bottom: 10px;
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.product-box h4 {
+    font-size: 1.1rem; /* Slightly smaller font for product names */
+    color: #333;
+    margin: 10px 0;
+    height: 40px; /* Ensure product name has enough space */
+    overflow: hidden; /* To avoid overflow in case the name is too long */
+}
+
+.product-box p {
+    font-size: 0.9rem; /* Smaller text for descriptions */
+    color: #555;
+    margin-bottom: 10px;
+    height: 50px; /* Limited space for description */
+    overflow: hidden; /* Hide overflowed description text */
+}
+
+.product-box a.add-to-cart-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff6f61;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.product-box a.add-to-cart-btn:hover {
+    background-color: #ff3d2e; /* Button hover effect */
+}
+
+/* Existing authentication page styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('images/auth_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    max-width: 400px;
+    margin: 5% auto;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+button {
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3d2e;
+}
+
+a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design - Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Even smaller boxes on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Extremely small boxes for mobile */
+    }
+}

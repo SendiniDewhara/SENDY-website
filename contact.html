@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dark Theme</title>
+    <style>
+        /* Dark Theme Styles */
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ff5722;
+            text-align: center;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background-color: #292929;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus, button:focus {
+            border-color: #ff5722;
+            outline: none;
+        }
+
+        button {
+            background-color: #ff5722;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e64a19;
+        }
+
+        p.error {
+            color: #ff5722;
+            font-size: 14px;
+        }
+
+        p.success {
+            color: #4caf50;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form action="send_message.php" method="POST">
+        <h1>Contact Us</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
